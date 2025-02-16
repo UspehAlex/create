@@ -1,7 +1,13 @@
 import Link from "next/link"
+import { ReactElement } from "react"
 
-export default function Home() {
-  const pages = [
+interface Page {
+  name: string
+  href: string
+}
+
+export default function Home(): ReactElement {
+  const pages: Page[] = [
     { name: "Image Creation", href: "/image-creation" },
     { name: "Video Creation", href: "/video-creation" },
     { name: "Text Writing", href: "/text-writing" },
@@ -28,4 +34,3 @@ export default function Home() {
     </div>
   )
 }
-

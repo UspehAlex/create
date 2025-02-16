@@ -11,7 +11,17 @@ export const metadata: Metadata = {
   description: "Create and manage content blocks for various creative tasks",
     generator: 'v0.dev'
 }
+// components/Button.tsx
 
+interface ButtonProps {
+  children: React.ReactNode;
+}
+
+const Button: React.FC<ButtonProps> = ({ children }) => {
+  return <button>{children}</button>;
+};
+
+export default Button;
 export default function RootLayout({
   children,
 }: {
